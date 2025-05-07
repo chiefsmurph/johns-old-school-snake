@@ -1,0 +1,508 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0098)https://web.archive.org/web/20060222231616/http://www12.brinkster.com/chiefsmurph3/Snake/snake.asp -->
+<html style="--wm-toolbar-height: 67px;"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script src="./snake.asp_files/athena.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app214.us.archive.org';v.server_ms=354;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./snake.asp_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./snake.asp_files/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden"};</script>
+<script type="text/javascript" src="./snake.asp_files/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www12.brinkster.com:80/chiefsmurph3/Snake/snake.asp","20060222231616","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1140650176");
+</script>
+<link rel="stylesheet" type="text/css" href="./snake.asp_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./snake.asp_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+<style>
+DIV {
+display: none;
+}
+TABLE {
+        display: none;
+	BORDER-RIGHT: red 3px solid; BORDER-TOP: red 3px solid; FONT-SIZE: 120%; BORDER-LEFT: red 3px solid; BORDER-BOTTOM: red 3px solid
+}
+TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; WIDTH: 25px; PADDING-TOP: 0px; HEIGHT: 25px; BACKGROUND-COLOR: black
+}
+fd {
+display: none;
+}
+#t {
+display: block;
+}
+</style>
+
+<script>
+time = 200
+dir = "up"
+redset = true
+redcol = 1
+redrow = 1
+
+function doit() {
+document.getElementById(redcol + ":" + redrow).style.backgroundColor = "black"
+newredcol = Math.round(Math.random() * 15)
+newredrow = Math.round(Math.random() * 15)
+
+if (document.getElementById(newredcol + ":" + newredrow) && newredrow != redrow && newredcol != redcol) {
+redcol = newredcol
+redrow = newredrow
+} else {
+doit() 
+ }
+redset = false
+}
+
+function set(col, row, time, rate) {
+if (col == "15" && row == "8") {
+document.it1.speed.value = rate
+}
+
+if (dir != "") {
+if (col == redcol && row == redrow) {
+document.it1.eaten.value++
+time = time - rate
+redset = true
+}
+
+if (redset == true) {
+doit()
+document.getElementById(redcol + ":" + redrow).style.backgroundColor = "red"
+}
+
+document.getElementById(col + ":" + row).style.backgroundColor = "black"
+if (dir == "up") {
+col--
+} else if (dir == "down") {
+col++
+} else if (dir == "left") {
+row--
+} else if (dir == "right") {
+row++
+}
+if (document.getElementById(col + ":" + row)) {
+
+document.getElementById(col + ":" + row).style.backgroundColor = "white"
+setTimeout("set(" + col + ", " + row + ", " + time + ", " + rate + ")", time)
+} else {
+alert("Game Over!")
+alert("Total score: " + document.it1.eaten.value)
+document.getElementById(redcol + ":" + redrow).style.backgroundColor = "black"
+redset = true
+dir = "up"
+time = 200
+  }
+ } else {
+setTimeout("set(" + col + ", " + row + ", " + time + ", " + rate + ")", time)
+ }
+}
+function change() {
+if (event.keyCode == "38" && dir != "down") {
+dir = "up";
+} else if (event.keyCode == "40" && dir != "up") {
+dir = "down";
+} else if (event.keyCode == "37" && dir != "right") {
+dir = "left";
+} else if (event.keyCode == "39" && dir != "left") {
+dir = "right";
+ }
+}
+</script>
+
+<meta content="MSHTML 6.00.2800.1276" name="GENERATOR"></head>
+<body onkeydown="change()"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr; height: 67px;" toolbar-mode="auto"><template shadowrootmode="closed"><div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;" class="">
+<div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20060222231616/http%3A//www12.brinkster.com/chiefsmurph3/Snake/snake.asp" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><div id="wm-ipp-inside">
+  <div id="wm-toolbar" style="position:relative;display:flex;flex-flow:row nowrap;justify-content:space-between;">
+    <div id="wm-logo" style="/*width:110px;*/padding-top:12px;">
+      <a href="https://web.archive.org/web/" title="Wayback Machine home page"><img src="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-100.png, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0"></a>
+    </div>
+    <div class="c" style="display:flex;flex-flow:column nowrap;justify-content:space-between;flex:1;">
+      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="https://web.archive.org/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www12.brinkster.com/chiefsmurph3/Snake/snake.asp" onfocus="this.focus();this.select();" style="flex:1;" autocomplete="off"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20060222231616"><input type="submit" value="Go">
+      </form>
+      <div style="display:flex;flex-flow:row nowrap;align-items:flex-end;">
+                <div class="s" id="wm-nav-captures" style="flex:1;"><a class="t" href="https://web.archive.org/web/*/http://www12.brinkster.com/chiefsmurph3/Snake/snake.asp" title="See a list of every capture for this URL">4 captures</a><div class="r" title="Timespan for captures of this URL">5 Feb 2006 - 22 Feb 2006</div></div>
+        <div class="k">
+          <a href="https://web.archive.org/web/19991201000000/http://www12.brinkster.com/chiefsmurph3/Snake/snake.asp" id="wm-graph-anchor">
+            <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+              <canvas id="wm-sparkline-canvas" width="750" height="27" border="0"></canvas>
+            <div class="yt" style="display: none; width: 25px; height: 27px; left: 75px;"></div><div class="mt" style="display: none; width: 2px; height: 27px; left: 98px;"></div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="n">
+      <table>
+        <tbody>
+          <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+          <tr class="m">
+            <td class="b" nowrap="nowrap">Jan</td>
+            <td class="c" id="displayMonthEl" title="You are here: 23:16:16 Feb 22, 2006">Feb</td>
+            <td class="f" nowrap="nowrap">Mar</td>
+          </tr>
+          <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+          <tr class="d">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20060214222917/http://www12.brinkster.com:80/chiefsmurph3/Snake/snake.asp" title="22:29:17 Feb 14, 2006"><img src="https://web-static.archive.org/_static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0"></a></td>
+            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 23:16:16 Feb 22, 2006">22</td>
+            <td class="f" nowrap="nowrap"><img src="https://web-static.archive.org/_static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"></td>
+          </tr>
+          <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+          <tr class="y">
+            <td class="b" nowrap="nowrap">2005</td>
+            <td class="c" id="displayYearEl" title="You are here: 23:16:16 Feb 22, 2006">2006</td>
+            <td class="f" nowrap="nowrap">2007</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="r" style="display:flex;flex-flow:column nowrap;align-items:flex-end;justify-content:space-between;">
+      <div id="wm-btns" style="text-align:right;height:23px;">
+                <span class="xxs">
+          <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a id="wm-save-snapshot-open" href="https://web.archive.org/web/20060222231616/http://www12.brinkster.com/chiefsmurph3/Snake/snake.asp#" title="Share via My Web Archive" style="display: none;">
+            <span class="iconochive-web"></span>
+          </a>
+          <a href="https://archive.org/account/login.php" title="Sign In" id="wm-sign-in" style="display: inline-block;">
+            <span class="iconochive-person"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web" style="display: none;"></span>
+        </span>
+                <a class="xxs" href="http://faq.web.archive.org/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
+        <a id="wm-tb-close" href="https://web.archive.org/web/20060222231616/http://www12.brinkster.com/chiefsmurph3/Snake/snake.asp#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id="wm-share" class="xxs">
+        <a href="https://web.archive.org/web/20060222231616/http://web.archive.org/screenshot/http://www12.brinkster.com/chiefsmurph3/Snake/snake.asp" id="wm-screenshot" title="screenshot" style="visibility: hidden;">
+          <span class="wm-icon-screen-shot"></span>
+        </a>
+        <a href="https://web.archive.org/web/20060222231616/http://www12.brinkster.com/chiefsmurph3/Snake/snake.asp#" id="wm-video" title="video">
+          <span class="iconochive-movies"></span>
+        </a>
+        <a id="wm-share-facebook" href="https://web.archive.org/web/20060222231616/http://www12.brinkster.com/chiefsmurph3/Snake/snake.asp#" data-url="https://web.archive.org/web/20060222231616/http://www12.brinkster.com:80/chiefsmurph3/Snake/snake.asp" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+        <a id="wm-share-twitter" href="https://web.archive.org/web/20060222231616/http://www12.brinkster.com/chiefsmurph3/Snake/snake.asp#" data-url="https://web.archive.org/web/20060222231616/http://www12.brinkster.com:80/chiefsmurph3/Snake/snake.asp" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+      <div style="padding-right:2px;text-align:right;white-space:nowrap;">
+        <a id="wm-expand" class="wm-btn wm-closed" href="https://web.archive.org/web/20060222231616/http://www12.brinkster.com/chiefsmurph3/Snake/snake.asp#expand"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
+      </div>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
+        <div id="wm-capinfo-notice" source="api"></div>
+                <div id="wm-capinfo-collected-by">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center">COLLECTED BY</div>
+    <div style="padding:3px;position:relative" id="wm-collected-by-content">
+            <div style="display:inline-block;vertical-align:top;width:50%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexacrawls);"></span>
+		Organization: <a style="color:#33f;" href="https://archive.org/details/alexacrawls" target="_new"><span class="wm-title">Alexa Crawls</span></a>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Starting in 1996, <a href="http://www.alexa.com/">Alexa Internet</a> has been donating their crawl data to the Internet Archive.  Flowing in every day, these data are added to the <a href="http://web.archive.org/">Wayback Machine</a> after an embargo period.
+	</div>
+	      </div>
+      <div style="display:inline-block;vertical-align:top;width:49%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexa_eh)"></span>
+		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/alexa_eh" target="_new"><span class="wm-title">Alexa Crawl EH</span></a></div>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Crawl EH from Alexa Internet.  This data is currently not publicly accessible.
+	</div>
+	      </div>
+    </div>
+    </div>
+    <div id="wm-capinfo-timestamps">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center" title="Timestamps for the elements of this page">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="https://web-static.archive.org/_static/images/loading.gif" alt="loading"></div>
+    </div>
+    </div>
+  </div></div></div><link rel="stylesheet" type="text/css" href="./snake.asp_files/banner-styles.css"><link rel="stylesheet" type="text/css" href="./snake.asp_files/iconochive.css"><div class="wb-autocomplete-suggestions "></div></template>
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20060222231616/http://www12.brinkster.com:80/chiefsmurph3/Snake/snake.asp</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(750,27,25,2,"web","http://www12.brinkster.com/chiefsmurph3/Snake/snake.asp","20060222231616",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=p7PEIJWi","https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+<!-- BEGIN text generated by server. PLEASE REMOVE -->
+
+<script language="javascript">
+var google_language="en";
+var adHB=true; 
+</script>
+<script language="javascript" src="./snake.asp_files/adplace.js"></script>
+<script language="javascript">wDoL("top","OY83VRO");</script><div id="OY83VRO" style="z-index: 999; visibility: visible;"><script type="text/javascript" src="./snake.asp_files/show_ads.js"></script><iframe name="google_ads_frame" width="728" height="90" frameborder="0" src="./snake.asp_files/ads.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" data-ruffle-polyfilled=""><img height="1" width="1" border="0" src="https://web.archive.org/web/20060201010057/http://pagead2.googlesyndication.com/pagead/imp.gif?event=noiframe&client=ca-pub-1736321574206681&dt=1140650177707&hl=en&adsafe=high&lmt=1746647732&format=728x90_as&output=html&url=http%3A%2F%2Fwww12.brinkster.com%2Fchiefsmurph3%2FSnake%2Fsnake.asp&cc=100&u_h=1117&u_w=1728&u_ah=1079&u_aw=1728&u_cd=30&u_his=9&u_nplug=6&u_nmime=6" /></iframe>
+<script language="javascript">wCls("OY83VRO");</script><table border="0" cellpadding="0" cellspacing="0" width="120" id="Table1"><tbody><tr><td height="1"><img src="./snake.asp_files/rd.aspx" width="1" height="1" border="0"></td></tr></tbody></table>
+<script language="javascript">wDoL("btm","OY83VRO");</script></div>
+<script language="javascript">showA("OY83VRO");</script>
+<div style="font-family:Verdana, Arial, Helvetica, sans-serif; color:#666666; font-size:9px">Web Hosting by <a href="https://web.archive.org/web/20060222231616/http://www.brinkster.com/" style="color:#000000" target="_blank">Brinkster</a></div>
+<!-- END text generated by server. PLEASE REMOVE -->
+
+
+<form name="it1" action="https://web.archive.org/web/20060222231616/http://www12.brinkster.com/chiefsmurph3/Snake/submit.asp" onsubmit="if(this.eaten.value==&#39;0&#39;) {alert(&#39;You must have a score greater than 0 to submit a score&#39;); return false;} else if(this.sn.value==&#39;&#39;) {alert(&#39;Please put your name in the space provided&#39;); return false;} else if(this.eddr.value==&#39;&#39;) {alert(&#39;Please put your email in the space provided&#39;); return false;}" method="post">
+
+Email Addr: <input name="eaddr"><br>
+
+Name: <input name="sn"><br>
+
+Apples eaten: <input value="0" name="eaten" onfocus="blur()"><br>
+<input name="speed" type="hidden" value="0.08">
+You <b>must</b> enter a valid email address or your high score will not be counted.  Sorry, I would have no way to contact you if you make the top 10 in advanced.<br>
+<input type="submit" value="Submit Score"></form>
+<table cellspacing="0" bgcolor="red" id="it" style="display: block">
+  <tbody>
+  <tr>
+    <td id="1:1" style="background-color: black;">
+    </td><td id="1:2" style="background-color: black;">
+    </td><td id="1:3">
+    </td><td id="1:4" style="background-color: black;">
+    </td><td id="1:5" style="background-color: black;">
+    </td><td id="1:6" style="background-color: black;">
+    </td><td id="1:7" style="background-color: black;">
+    </td><td id="1:8" style="background-color: black;">
+    </td><td id="1:9" style="background-color: black;">
+    </td><td id="1:10" style="background-color: black;">
+    </td><td id="1:11" style="background-color: black;">
+    </td><td id="1:12" style="background-color: black;">
+    </td><td id="1:13" style="background-color: black;">
+    </td><td id="1:14" style="background-color: black;">
+    </td><td id="1:15">
+  </td></tr><tr>
+    <td id="2:1" style="background-color: black;">
+    </td><td id="2:2" style="background-color: black;">
+    </td><td id="2:3" style="background-color: black;">
+    </td><td id="2:4" style="background-color: black;">
+    </td><td id="2:5" style="background-color: black;">
+    </td><td id="2:6" style="background-color: black;">
+    </td><td id="2:7" style="background-color: black;">
+    </td><td id="2:8" style="background-color: black;">
+    </td><td id="2:9" style="background-color: black;">
+    </td><td id="2:10" style="background-color: black;">
+    </td><td id="2:11" style="background-color: black;">
+    </td><td id="2:12" style="background-color: black;">
+    </td><td id="2:13" style="background-color: black;">
+    </td><td id="2:14" style="background-color: black;">
+    </td><td id="2:15">
+  </td></tr><tr>
+    <td id="3:1" style="background-color: black;">
+    </td><td id="3:2" style="background-color: black;">
+    </td><td id="3:3" style="background-color: black;">
+    </td><td id="3:4" style="background-color: black;">
+    </td><td id="3:5" style="background-color: black;">
+    </td><td id="3:6" style="background-color: black;">
+    </td><td id="3:7" style="background-color: black;">
+    </td><td id="3:8" style="background-color: black;">
+    </td><td id="3:9" style="background-color: black;">
+    </td><td id="3:10" style="background-color: black;">
+    </td><td id="3:11" style="background-color: black;">
+    </td><td id="3:12" style="background-color: black;">
+    </td><td id="3:13" style="background-color: black;">
+    </td><td id="3:14" style="background-color: black;">
+    </td><td id="3:15" style="background-color: black;">
+  </td></tr><tr>
+    <td id="4:1" style="background-color: black;">
+    </td><td id="4:2" style="background-color: black;">
+    </td><td id="4:3" style="background-color: black;">
+    </td><td id="4:4" style="background-color: black;">
+    </td><td id="4:5" style="background-color: black;">
+    </td><td id="4:6" style="background-color: black;">
+    </td><td id="4:7" style="background-color: black;">
+    </td><td id="4:8" style="background-color: black;">
+    </td><td id="4:9" style="background-color: black;">
+    </td><td id="4:10" style="background-color: black;">
+    </td><td id="4:11" style="background-color: black;">
+    </td><td id="4:12" style="background-color: black;">
+    </td><td id="4:13" style="background-color: black;">
+    </td><td id="4:14" style="background-color: black;">
+    </td><td id="4:15" style="background-color: black;">
+  </td></tr><tr>
+    <td id="5:1" style="background-color: black;">
+    </td><td id="5:2" style="background-color: black;">
+    </td><td id="5:3" style="background-color: black;">
+    </td><td id="5:4" style="background-color: black;">
+    </td><td id="5:5" style="background-color: black;">
+    </td><td id="5:6" style="background-color: black;">
+    </td><td id="5:7" style="background-color: black;">
+    </td><td id="5:8" style="background-color: black;">
+    </td><td id="5:9" style="background-color: black;">
+    </td><td id="5:10" style="background-color: black;">
+    </td><td id="5:11" style="background-color: black;">
+    </td><td id="5:12" style="background-color: black;">
+    </td><td id="5:13" style="background-color: black;">
+    </td><td id="5:14" style="background-color: black;">
+    </td><td id="5:15" style="background-color: black;">
+  </td></tr><tr>
+    <td id="6:1" style="background-color: black;">
+    </td><td id="6:2" style="background-color: black;">
+    </td><td id="6:3" style="background-color: black;">
+    </td><td id="6:4" style="background-color: black;">
+    </td><td id="6:5" style="background-color: black;">
+    </td><td id="6:6" style="background-color: black;">
+    </td><td id="6:7" style="background-color: black;">
+    </td><td id="6:8" style="background-color: black;">
+    </td><td id="6:9" style="background-color: black;">
+    </td><td id="6:10" style="background-color: black;">
+    </td><td id="6:11" style="background-color: black;">
+    </td><td id="6:12" style="background-color: black;">
+    </td><td id="6:13" style="background-color: black;">
+    </td><td id="6:14" style="background-color: black;">
+    </td><td id="6:15" style="background-color: black;">
+  </td></tr><tr>
+    <td id="7:1" style="background-color: black;">
+    </td><td id="7:2" style="background-color: black;">
+    </td><td id="7:3" style="background-color: black;">
+    </td><td id="7:4" style="background-color: black;">
+    </td><td id="7:5" style="background-color: black;">
+    </td><td id="7:6" style="background-color: black;">
+    </td><td id="7:7" style="background-color: black;">
+    </td><td id="7:8" style="background-color: black;">
+    </td><td id="7:9" style="background-color: black;">
+    </td><td id="7:10" style="background-color: black;">
+    </td><td id="7:11" style="background-color: black;">
+    </td><td id="7:12" style="background-color: black;">
+    </td><td id="7:13" style="background-color: black;">
+    </td><td id="7:14" style="background-color: black;">
+    </td><td id="7:15" style="background-color: black;">
+  </td></tr><tr>
+    <td id="8:1" style="background-color: black;">
+    </td><td id="8:2" style="background-color: black;">
+    </td><td id="8:3" style="background-color: black;">
+    </td><td id="8:4" style="background-color: black;">
+    </td><td id="8:5" style="background-color: black;">
+    </td><td id="8:6" style="background-color: black;">
+    </td><td id="8:7" style="background-color: black;">
+    </td><td id="8:8" style="background-color: black;">
+    </td><td id="8:9" style="background-color: black;">
+    </td><td id="8:10" style="background-color: black;">
+    </td><td id="8:11" style="background-color: black;">
+    </td><td id="8:12" style="background-color: black;">
+    </td><td id="8:13" style="background-color: black;">
+    </td><td id="8:14" style="background-color: black;">
+    </td><td id="8:15" style="background-color: black;">
+  </td></tr><tr>
+    <td id="9:1" style="background-color: black;">
+    </td><td id="9:2" style="background-color: black;">
+    </td><td id="9:3" style="background-color: black;">
+    </td><td id="9:4" style="background-color: black;">
+    </td><td id="9:5" style="background-color: black;">
+    </td><td id="9:6" style="background-color: black;">
+    </td><td id="9:7" style="background-color: black;">
+    </td><td id="9:8" style="background-color: black;">
+    </td><td id="9:9" style="background-color: black;">
+    </td><td id="9:10" style="background-color: black;">
+    </td><td id="9:11" style="background-color: black;">
+    </td><td id="9:12" style="background-color: black;">
+    </td><td id="9:13" style="background-color: black;">
+    </td><td id="9:14" style="background-color: black;">
+    </td><td id="9:15" style="background-color: black;">
+  </td></tr><tr>
+    <td id="10:1" style="background-color: black;">
+    </td><td id="10:2" style="background-color: black;">
+    </td><td id="10:3" style="background-color: black;">
+    </td><td id="10:4" style="background-color: black;">
+    </td><td id="10:5" style="background-color: black;">
+    </td><td id="10:6" style="background-color: black;">
+    </td><td id="10:7" style="background-color: black;">
+    </td><td id="10:8" style="background-color: black;">
+    </td><td id="10:9" style="background-color: black;">
+    </td><td id="10:10" style="background-color: black;">
+    </td><td id="10:11" style="background-color: black;">
+    </td><td id="10:12" style="background-color: black;">
+    </td><td id="10:13" style="background-color: black;">
+    </td><td id="10:14" style="background-color: black;">
+    </td><td id="10:15" style="background-color: black;"></td>
+  </tr><tr>
+    <td id="11:1" style="background-color: black;">
+    </td><td id="11:2" style="background-color: black;">
+    </td><td id="11:3" style="background-color: black;">
+    </td><td id="11:4" style="background-color: black;">
+    </td><td id="11:5" style="background-color: black;">
+    </td><td id="11:6" style="background-color: black;">
+    </td><td id="11:7" style="background-color: black;">
+    </td><td id="11:8" style="background-color: black;">
+    </td><td id="11:9" style="background-color: black;">
+    </td><td id="11:10" style="background-color: black;">
+    </td><td id="11:11" style="background-color: black;">
+    </td><td id="11:12" style="background-color: black;">
+    </td><td id="11:13" style="background-color: black;">
+    </td><td id="11:14" style="background-color: black;">
+    </td><td id="11:15" style="background-color: black;"></td>
+  </tr><tr>
+    <td id="12:1" style="background-color: black;">
+    </td><td id="12:2" style="background-color: black;">
+    </td><td id="12:3" style="background-color: black;">
+    </td><td id="12:4" style="background-color: black;">
+    </td><td id="12:5" style="background-color: black;">
+    </td><td id="12:6" style="background-color: black;">
+    </td><td id="12:7" style="background-color: black;">
+    </td><td id="12:8" style="background-color: black;">
+    </td><td id="12:9" style="background-color: black;">
+    </td><td id="12:10" style="background-color: black;">
+    </td><td id="12:11" style="background-color: black;">
+    </td><td id="12:12" style="background-color: black;">
+    </td><td id="12:13" style="background-color: black;">
+    </td><td id="12:14" style="background-color: black;">
+    </td><td id="12:15" style="background-color: black;"></td>
+  </tr><tr>
+    <td id="13:1" style="background-color: black;">
+    </td><td id="13:2" style="background-color: black;">
+    </td><td id="13:3" style="background-color: black;">
+    </td><td id="13:4" style="background-color: black;">
+    </td><td id="13:5" style="background-color: black;">
+    </td><td id="13:6" style="background-color: black;">
+    </td><td id="13:7" style="background-color: black;">
+    </td><td id="13:8" style="background-color: black;">
+    </td><td id="13:9" style="background-color: black;">
+    </td><td id="13:10" style="background-color: black;">
+    </td><td id="13:11" style="background-color: black;">
+    </td><td id="13:12" style="background-color: black;">
+    </td><td id="13:13" style="background-color: black;">
+    </td><td id="13:14" style="background-color: black;">
+    </td><td id="13:15" style="background-color: black;"></td>
+  </tr><tr>
+    <td id="14:1" style="background-color: black;">
+    </td><td id="14:2" style="background-color: black;">
+    </td><td id="14:3" style="background-color: black;">
+    </td><td id="14:4" style="background-color: black;">
+    </td><td id="14:5" style="background-color: black;">
+    </td><td id="14:6" style="background-color: black;">
+    </td><td id="14:7" style="background-color: black;">
+    </td><td id="14:8" style="background-color: black;">
+    </td><td id="14:9" style="background-color: black;">
+    </td><td id="14:10" style="background-color: black;">
+    </td><td id="14:11" style="background-color: black;">
+    </td><td id="14:12" style="background-color: black;">
+    </td><td id="14:13" style="background-color: black;">
+    </td><td id="14:14" style="background-color: black;">
+    </td><td id="14:15" style="background-color: black;"></td>
+  </tr><tr>
+    <td id="15:1" style="background-color: black;">
+    </td><td id="15:2" style="background-color: black;">
+    </td><td id="15:3">
+    </td><td id="15:4" style="background-color: black;">
+    </td><td id="15:5" style="background-color: black;">
+    </td><td id="15:6" style="background-color: black;">
+    </td><td id="15:7" style="background-color: black;">
+    </td><td id="15:8" style="background-color: black;">
+    </td><td id="15:9" style="background-color: black;">
+    </td><td id="15:10" style="background-color: black;">
+    </td><td id="15:11" style="background-color: black;">
+    </td><td id="15:12" style="background-color: black;">
+    </td><td id="15:13" style="background-color: black;">
+    </td><td id="15:14">
+    </td><td id="15:15"></td></tr></tbody></table><button onclick="document.it1.eaten.value = &#39;0&#39;;set(&#39;15&#39;, &#39;8&#39;, 220, 0.6)" value="New Game!">Beginner</button><button onclick="document.it1.eaten.value = &#39;0&#39;;set(&#39;15&#39;, &#39;8&#39;, 150, 0.4)" value="New Game!">Intermediate</button><button onclick="document.it1.eaten.value = &#39;0&#39;;set(&#39;15&#39;, &#39;8&#39;, 80, 0.08)" value="New Game!">Advanced</button><button onclick="document.it1.eaten.value = &#39;0&#39;;set(&#39;15&#39;, &#39;8&#39;, 30, 0.001)" value="New Game!">Impossible</button><br>Use 
+arrow keys to control white square<br>Run over red squares to gain points<br>
+<div style="font-size: 70%">Your email address wil never be solicited or sold in any way.  It is being used for the sole purpose of contacting you for your award at the end of the competition on 3/1/06</div>
+
+
+
+<script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script></body></html>
